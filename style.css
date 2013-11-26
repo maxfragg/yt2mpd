@@ -1,0 +1,81 @@
+
+
+body{
+	background: #cccccc;
+	font-family: "Trebuchet MS", Verdana, Arial, serif;
+}
+
+#container{
+  	width: 70%;
+  	margin: auto;
+  	padding: 30px;
+  	border: 1px solid #ffffff;
+  	background: #fefefe;
+}
+
+#youtube{
+	width: 70%;
+  	margin: auto;
+  	padding: 30px;
+  	border: 1px solid #ffffff;
+  	background: #fefefe;
+	font-family: "Trebuchet MS", Verdana, Arial, serif;
+	font-size:300%;
+	color: #b31217;
+}
+
+#button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #b31217;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #b31217;
+	box-shadow:inset 0px 1px 0px 0px #b31217;
+	background-color:#cd201f;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+	text-indent:0;
+	border:1px solid #d83526;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:80px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #b23e35;
+}.
+#button:hover {
+	background-color:#ce0100;
+}
+#button:active {
+	position:relative;
+	top:1px;
+}
+
+#input{
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
+	width:300px;
+}

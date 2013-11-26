@@ -19,16 +19,24 @@ echo '<html>'
 echo '<head>'
 echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">'
 echo '<title>youtube2mpd</title>'
+#echo '<link rel="stylesheet" type="text/css"href="style.css" />'
+echo '<style type="text/css">'
+cat style.css
+echo '</style>'
 echo '</head>'
 echo '<body>'
-
+echo '<div id="youtube">'
+echo 'youtube 2 mpd'
+echo '</div>'
+echo "<br>"
+echo '<div id="container">'
   echo "<form method=GET action=\"${SCRIPT}\">"\
        '<table nowrap>'\
-          '<tr><td>Input</TD><TD><input type="text" name="youtubeurl" size=12></td></tr>'\
+          '<tr><td>Input</TD><TD><input type="text" name="youtubeurl" size=12 id="input"></td></tr>'\
           '</tr></table>'
 
-  echo '<br><input type="submit" value="get video">'\
-       '<input type="reset" value="reset"></form>'
+  echo '<br><input type="submit" value="get video" id="button">'\
+       '<input type="reset" value="reset" id="button"></form>'
 
   # Make sure we have been invoked properly.
 
@@ -41,9 +49,7 @@ echo '<body>'
 
   # If no search arguments, exit gracefully now.
 
-  if [ -z "$QUERY_STRING" ]; then
-    exit 0
-  else
+  if [ -n "$QUERY_STRING" ]; then
     # No looping this time, just extract the data you are looking for with sed:
     XX=`echo "$QUERY_STRING" | sed -n 's/^.*youtubeurl=\([^&]*\).*$/\1/p' | sed "s/%20/ /g" | sed -f urldecode.sed`
 
@@ -52,6 +58,7 @@ echo '<body>'
     echo $XX>>/tmp/youtube-new
      
   fi
+echo '</div>'
 echo '</body>'
 echo '</html>'
 

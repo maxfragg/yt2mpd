@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Date:   2013-11-26
+# Date:     2013-11-26
 # Author:   maxfragg
-# Version: 0.1
+# Version:  0.1
+# License:  wtfpl
 # Based on http://www.yolinux.com/TUTORIALS/BashShellCgi.html
 
 # Simple CGI Script recieving youtube urls via input field, and passing them

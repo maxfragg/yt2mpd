@@ -23,9 +23,9 @@ while [[ true ]]; do
 		fi
 		mpc update --wait "youtube-dl"
 		echo "adding: youtube-dl/$filename"
-    	mpc add "youtube-dl/$filename"
+		mpc add "youtube-dl/$filename"
 
-    	mpc playlist -f '%position% %file%' | grep -i "$filename" | head -n1 | cut - -d " " -f 1 | xargs mpc play
+		mpc playlist -f '%position% %file%' | grep -i "$filename" | head -n1 | cut - -d " " -f 1 | xargs mpc play
 	done
 done
 

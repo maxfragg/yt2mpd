@@ -11,7 +11,7 @@
 while [[ true ]]; do
 	inotifywait -e close_write /tmp/youtube-new
 
-	YOUTUBE_NEW=$(comm -3 <(sort "/tmp/youtube-new") <(sort "/tmp/youtube-old"))
+	YOUTUBE_NEW=$(comm -3 <(sort "/tmp/youtube-new" | uniq) <(sort "/tmp/youtube-old" | uniq))
 
 	for URL in $YOUTUBE_NEW; do
 		echo "downloading: "$URL

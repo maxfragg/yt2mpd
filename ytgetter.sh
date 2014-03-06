@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Date: 	2013-11-26
-# Author: 	maxfragg
-# Version:  0.1
+# Date:     2014-03-06
+# Author:   maxfragg
+# Version:  0.2
 # License:  wtfpl
 # simple bash script downloading youtube videos and extracting the audio stream with youtube-dl (python)
 # uses /tmp/youtube-new as way to communicate with the cgi script
@@ -16,8 +16,7 @@ while [[ true ]]; do
 	for URL in $YOUTUBE_NEW; do
 		echo "downloading: "$URL
 		echo "$URL" >> /tmp/youtube-old
-		filename=""
-		filename=`youtube-dl -x -o "/media/1tb-0/musik/youtube-dl/%(title)s.%(ext)s" --restrict-filename $URL | grep "avconv"| cut -d' ' -f3| cut -d'/' -f6`
+		filename=`youtube-dl -x -o "/media/1tb-0/musik/youtube-dl/%(title)s.%(ext)s" --restrict-filename $URL | grep -F "[download] Destination"| cut -d' ' -f3| cut -d'/' -f6`
 		if [[ filename == "" ]]; then
 			continue
 		fi
